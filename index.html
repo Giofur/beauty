@@ -1,65 +1,101 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Borgo della Bellezza</title>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <meta
         name="description"
-        content="Borgo della Bellezza - Centro estetico dedicato alla cura del corpo, del viso, delle mani e dei piedi."
+        content="Borgo della Bellezza - Estetica, benessere e cura a Bergamo."
     >
+
+    <title>Borgo della Bellezza</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
+
 <body>
 
-    <!-- =========================
+    <!-- =====================================================
          HEADER
-    ========================== -->
+    ====================================================== -->
 
     <header class="site-header">
 
         <div class="header-inner">
 
-            <a href="#" class="logo">
-                <img src="logo.png" alt="Borgo della Bellezza">
+            <a href="#home" class="logo">
+                <img
+                    src="logo.png"
+                    alt="Borgo della Bellezza"
+                >
             </a>
 
-            <button class="menu-toggle" aria-label="Apri menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
 
-            <nav class="main-nav">
+            <!-- MENU DESKTOP / MOBILE -->
 
-                <a href="#servizi">Servizi</a>
+            <nav class="main-nav" id="mainNav">
 
-                <a href="#listino">Listino</a>
+                <a href="#servizi">
+                    Servizi
+                </a>
 
-                <a href="#chi-siamo">Chi siamo</a>
+                <a href="#listino">
+                    Listino
+                </a>
 
-                <a href="#contatti">Contatti</a>
+                <a href="#chi-siamo">
+                    Chi siamo
+                </a>
 
-                <a href="#contatti" class="nav-button">
+                <a href="#contatti">
+                    Contatti
+                </a>
+
+                <a
+                    href="#contatti"
+                    class="nav-button"
+                >
                     Prenota
                 </a>
 
             </nav>
+
+
+            <!-- MENU MOBILE -->
+
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                aria-label="Apri menu"
+                aria-expanded="false"
+                type="button"
+            >
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
 
         </div>
 
     </header>
 
 
-    <main>
 
-        <!-- =========================
+    <main id="home">
+
+
+        <!-- =================================================
              HERO
-        ========================== -->
+        ================================================== -->
 
         <section class="hero">
 
@@ -69,23 +105,34 @@
                     ESTETICA · BENESSERE · CURA
                 </span>
 
+
                 <h1>
                     La bellezza,<br>
                     nel suo borgo.
                 </h1>
 
+
                 <p>
-                    Un luogo dedicato alla cura di te, dove estetica,
-                    benessere e attenzione ai dettagli si incontrano.
+                    Un luogo dedicato alla cura di te,
+                    dove estetica, benessere e attenzione
+                    ai dettagli si incontrano.
                 </p>
+
 
                 <div class="hero-buttons">
 
-                    <a href="#servizi" class="button">
+                    <a
+                        href="#servizi"
+                        class="button"
+                    >
                         Scopri i trattamenti
                     </a>
 
-                    <a href="#listino" class="text-link">
+
+                    <a
+                        href="#listino"
+                        class="text-link"
+                    >
                         Vedi il listino →
                     </a>
 
@@ -96,9 +143,10 @@
         </section>
 
 
-        <!-- =========================
+
+        <!-- =================================================
              INTRO
-        ========================== -->
+        ================================================== -->
 
         <section class="intro">
 
@@ -111,26 +159,28 @@
             </h2>
 
             <p>
-                Trattamenti per corpo, viso, mani e piedi.
+                Trattamenti per corpo, viso,
+                mani e piedi.
             </p>
 
         </section>
 
 
-        <!-- =========================
+
+        <!-- =================================================
              CHI SIAMO
-        ========================== -->
+        ================================================== -->
 
         <section
+            class="section about"
             id="chi-siamo"
-            class="about section"
         >
 
             <div class="section-heading">
 
-                <span class="eyebrow">
+                <div class="section-label">
                     CHI SIAMO
-                </span>
+                </div>
 
                 <h2>
                     Un momento<br>
@@ -139,16 +189,19 @@
 
             </div>
 
+
             <div class="section-text">
 
                 <p>
-                    Borgo della Bellezza è uno spazio dedicato
-                    alla cura personale, alla bellezza e al benessere.
+                    Borgo della Bellezza è uno spazio
+                    dedicato alla cura personale,
+                    alla bellezza e al benessere.
                 </p>
 
                 <p>
-                    Ogni trattamento viene realizzato con attenzione
-                    e professionalità, in un ambiente elegante,
+                    Ogni trattamento viene realizzato
+                    con attenzione e professionalità,
+                    in un ambiente elegante,
                     tranquillo e accogliente.
                 </p>
 
@@ -157,20 +210,21 @@
         </section>
 
 
-        <!-- =========================
+
+        <!-- =================================================
              SERVIZI
-        ========================== -->
+        ================================================== -->
 
         <section
+            class="section services"
             id="servizi"
-            class="services section"
         >
 
             <div class="section-heading">
 
-                <span class="eyebrow">
+                <div class="section-label">
                     I NOSTRI SERVIZI
-                </span>
+                </div>
 
                 <h2>
                     Cura di mani,<br>
@@ -192,14 +246,14 @@
                     </span>
 
                     <h3>
-                        Manicure
-                        <br>
+                        Manicure<br>
                         &amp; Pedicure
                     </h3>
 
                     <p>
-                        Manicure, pedicure estetico e curativo,
-                        smalto normale e semipermanente.
+                        Manicure, pedicure estetico
+                        e curativo, smalto normale
+                        e semipermanente.
                     </p>
 
                     <a href="#listino">
@@ -207,6 +261,7 @@
                     </a>
 
                 </article>
+
 
 
                 <!-- SERVIZIO 02 -->
@@ -222,8 +277,9 @@
                     </h3>
 
                     <p>
-                        Epilazione di viso e corpo, con trattamenti
-                        pensati per ogni esigenza.
+                        Epilazione di viso e corpo,
+                        con trattamenti pensati
+                        per ogni esigenza.
                     </p>
 
                     <a href="#listino">
@@ -231,6 +287,7 @@
                     </a>
 
                 </article>
+
 
 
                 <!-- SERVIZIO 03 -->
@@ -242,14 +299,14 @@
                     </span>
 
                     <h3>
-                        Trattamenti
-                        <br>
+                        Trattamenti<br>
                         Viso &amp; Corpo
                     </h3>
 
                     <p>
-                        Pulizia viso, massaggi, laminazione,
-                        scrub corpo e pressoterapia.
+                        Pulizia viso, massaggi,
+                        laminazione, scrub corpo
+                        e pressoterapia.
                     </p>
 
                     <a href="#listino">
@@ -257,6 +314,7 @@
                     </a>
 
                 </article>
+
 
 
                 <!-- SERVIZIO 04 -->
@@ -268,14 +326,14 @@
                     </span>
 
                     <h3>
-                        Laser
-                        <br>
+                        Laser<br>
                         Diodo
                     </h3>
 
                     <p>
-                        Epilazione definitiva progressiva
-                        con laser diodo.
+                        Epilazione definitiva
+                        progressiva con laser
+                        diodo.
                     </p>
 
                     <a href="#listino">
@@ -289,20 +347,21 @@
         </section>
 
 
-        <!-- =========================
+
+        <!-- =================================================
              LISTINO
-        ========================== -->
+        ================================================== -->
 
         <section
+            class="section price-list"
             id="listino"
-            class="price-list section"
         >
 
             <div class="section-heading">
 
-                <span class="eyebrow">
+                <div class="section-label">
                     LISTINO PREZZI
-                </span>
+                </div>
 
                 <h2>
                     Tutto il listino,<br>
@@ -310,11 +369,13 @@
                 </h2>
 
                 <p>
-                    Consulta i prezzi dei trattamenti riportati
-                    nel listino di Borgo della Bellezza.
+                    Consulta i prezzi dei trattamenti
+                    riportati nel listino di
+                    Borgo della Bellezza.
                 </p>
 
             </div>
+
 
 
             <!-- MANICURE -->
@@ -324,6 +385,7 @@
                 <h3>
                     MANICURE &amp; PEDICURE
                 </h3>
+
 
                 <div class="price-row">
                     <span>Manicure senza smalto</span>
@@ -351,495 +413,8 @@
                 </div>
 
                 <div class="price-row">
-                    <span>Pedicure estetico + semipermanente</span>
+                    <span>
+                        Pedicure estetico +
+                        semipermanente
+                    </span>
                     <strong>38€</strong>
-                </div>
-
-                <div class="price-row">
-                    <span>Pedicure curativo + semipermanente</span>
-                    <strong>43€</strong>
-                </div>
-
-                <div class="price-row">
-                    <span>Rimozione semipermanente</span>
-                    <strong>8€</strong>
-                </div>
-
-            </div>
-
-
-            <!-- DRY MANICURE -->
-
-            <div class="price-category">
-
-                <h3>
-                    DRY MANICURE
-                </h3>
-
-                <p class="category-note">
-                    Metodo a secco / Russa
-                </p>
-
-                <div class="price-row">
-                    <span>Manicure senza smalto</span>
-                    <strong>15€</strong>
-                </div>
-
-                <div class="price-row">
-                    <span>Semipermanente</span>
-                    <strong>35€</strong>
-                </div>
-
-                <div class="price-row">
-                    <span>Ricostruzione (medio-corte)</span>
-                    <strong>60€</strong>
-                </div>
-
-                <div class="price-row">
-                    <span>Ricostruzione (lunghe)</span>
-                    <strong>70€</strong>
-                </div>
-
-                <div class="price-row">
-                    <span>Refill</span>
-                    <strong>45€</strong>
-                </div>
-
-                <div class="price-row">
-                    <span>French / Baby Boomer</span>
-                    <strong>+5€</strong>
-                </div>
-
-                <div class="price-row">
-                    <span>
-                        Rimozione smalto semipermanente
-                        con manicure
-                    </span>
-                    <strong>20€</strong>
-                </div>
-
-                <div class="price-row">
-                    <span>Decorazioni o disegni difficili</span>
-                    <strong>+5€</strong>
-                </div>
-
-            </div>
-
-
-            <!-- EPILAZIONE -->
-
-            <div class="price-category">
-
-                <h3>
-                    EPILAZIONE
-                </h3>
-
-                <div class="price-row">
-                    <span>Sopracciglia</span>
-                    <strong>6€</strong>
-                </div>
-
-                <div class="price-row">
-                    <span>Baffetti</span>
-                    <strong>5€</strong>
-                </div>
-
-                <div class="price-row">
-                    <span>Mento</span>
-                    <strong>8€</strong>
-                </div>
-
-                <div class="price-row">
-                    <span>Ascelle</span>
-                    <strong>8€</strong>
-                </div>
-
-                <div class="price-row">
-                    <span>Braccia</span>
-                    <strong>15€</strong>
-                </div>
-
-                <div class="price-row">
-                    <span>Inguine parziale</span>
-                    <strong>10€</strong>
-                </div>
-
-                <div class="price-row">
-                    <span>Inguine totale</span>
-                    <strong>15€</strong>
-                </div>
-
-                <div class="price-row">
-                    <span>Mezza gamba</span>
-                    <strong>20€</strong>
-                </div>
-
-                <div class="price-row">
-                    <span>Gamba intera</span>
-                    <strong>30€</strong>
-                </div>
-
-                <div class="price-row">
-                    <span>Petto</span>
-                    <strong>20€</strong>
-                </div>
-
-                <div class="price-row">
-                    <span>Schiena</span>
-                    <strong>20€</strong>
-                </div>
-
-            </div>
-
-
-            <!-- LASER -->
-
-            <div class="price-category">
-
-                <h3>
-                    EPILAZIONE DEFINITIVA PROGRESSIVA
-                    LASER DIODO
-                </h3>
-
-                <p class="category-note">
-                    Costo a seduta
-                </p>
-
-                <div class="price-row">
-                    <span>Baffetti</span>
-                    <strong>20€</strong>
-                </div>
-
-                <div class="price-row">
-                    <span>Mento</span>
-                    <strong>20€</strong>
-                </div>
-
-                <div class="price-row">
-                    <span>Braccia</span>
-                    <strong>60€</strong>
-                </div>
-
-                <div class="price-row">
-                    <span>Ascelle</span>
-                    <strong>30€</strong>
-                </div>
-
-                <div class="price-row">
-                    <span>Inguine</span>
-                    <strong>50€</strong>
-                </div>
-
-                <div class="price-row">
-                    <span>Mezza gamba</span>
-                    <strong>60€</strong>
-                </div>
-
-                <div class="price-row">
-                    <span>Gamba intera</span>
-                    <strong>120€</strong>
-                </div>
-
-                <div class="price-row">
-                    <span>Schiena</span>
-                    <strong>70€</strong>
-                </div>
-
-                <div class="price-row">
-                    <span>Petto</span>
-                    <strong>70€</strong>
-                </div>
-
-            </div>
-
-
-            <!-- VISO E CORPO -->
-
-            <div class="price-category">
-
-                <h3>
-                    TRATTAMENTI VISO E CORPO
-                </h3>
-
-                <div class="price-row">
-                    <span>Pulizia viso</span>
-                    <strong>55€</strong>
-                </div>
-
-                <div class="price-row">
-                    <span>Massaggio corpo</span>
-                    <strong>da 40€</strong>
-                </div>
-
-                <div class="price-row">
-                    <span>Paraffina</span>
-                    <strong>13€</strong>
-                </div>
-
-                <div class="price-row">
-                    <span>Laminazione ciglia</span>
-                    <strong>70€</strong>
-                </div>
-
-                <div class="price-row">
-                    <span>Laminazione sopracciglia</span>
-                    <strong>55€</strong>
-                </div>
-
-                <div class="price-row">
-                    <span>Trattamenti viso</span>
-                    <strong>da 30€</strong>
-                </div>
-
-                <div class="price-row">
-                    <span>Trattamenti corpo</span>
-                    <strong>da 35€</strong>
-                </div>
-
-                <div class="price-row">
-                    <span>Scrub corpo</span>
-                    <strong>50€</strong>
-                </div>
-
-                <div class="price-row">
-                    <span>Pressoterapia</span>
-                    <strong>35€</strong>
-                </div>
-
-                <div class="price-row">
-                    <span>
-                        Extension ciglia e Trucco semipermanente
-                    </span>
-
-                    <strong>
-                        Consulenza
-                    </strong>
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-             CONTATTI
-        ========================== -->
-
-        <section
-            id="contatti"
-            class="contact section"
-        >
-
-            <div class="section-heading">
-
-                <span class="eyebrow">
-                    CONTATTI
-                </span>
-
-                <h2>
-                    Prenditi cura<br>
-                    di te.
-                </h2>
-
-            </div>
-
-            <div class="contact-content">
-
-                <p>
-                    Per informazioni, appuntamenti e consulenze
-                    contattaci direttamente.
-                </p>
-
-
-                <div class="contact-details">
-
-                    <div class="contact-item">
-
-                        <span>
-                            TELEFONO
-                        </span>
-
-                        <a href="tel:+390000000000">
-                            +39 000 000 0000
-                        </a>
-
-                    </div>
-
-
-                    <div class="contact-item">
-
-                        <span>
-                            EMAIL
-                        </span>
-
-                        <a href="mailto:info@borgodellabellezza.it">
-                            info@borgodellabellezza.it
-                        </a>
-
-                    </div>
-
-
-                    <div class="contact-item">
-
-                        <span>
-                            INDIRIZZO
-                        </span>
-
-                        <p>
-                            Via Borgo Palazzo, 19,<br>
-                            24121 Bergamo BG
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-    </main>
-
-
-    <!-- =========================
-         FOOTER
-    ========================== -->
-
-    <footer class="site-footer">
-
-
-        <!-- IMMAGINE NUOVA -->
-
-        <div class="footer-image">
-
-            <img
-                src="footer-bg.png"
-                alt="Borgo della Bellezza"
-            >
-
-        </div>
-
-
-        <!-- FOOTER PRINCIPALE -->
-
-        <div class="footer-content">
-
-
-            <!-- INDIRIZZO -->
-
-            <div class="footer-column">
-
-                <div class="footer-icon">
-                    ⌖
-                </div>
-
-                <div>
-
-                    <h3>
-                        Dove siamo
-                    </h3>
-
-                    <p>
-                        Via Borgo Palazzo, 19
-                    </p>
-
-                    <p>
-                        24121 Bergamo BG
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <!-- TELEFONO -->
-
-            <div class="footer-column">
-
-                <div class="footer-icon">
-                    ☎
-                </div>
-
-                <div>
-
-                    <h3>
-                        Contatti
-                    </h3>
-
-                    <p>
-                        +39 000 000 0000
-                    </p>
-
-                    <p>
-                        Lun - Sab · 9:00 - 19:00
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <!-- SOCIAL -->
-
-            <div class="footer-column">
-
-                <div class="footer-icon">
-                    ◎
-                </div>
-
-                <div>
-
-                    <h3>
-                        Seguici
-                    </h3>
-
-                    <div class="footer-social">
-
-                        <a href="#" aria-label="Instagram">
-                            Instagram
-                        </a>
-
-                        <a href="#" aria-label="Facebook">
-                            Facebook
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <!-- FRASE -->
-
-            <div class="footer-motto">
-
-                <p>
-                    La tua bellezza,<br>
-                    il nostro benessere.
-                </p>
-
-                <span>
-                    ✦
-                </span>
-
-            </div>
-
-        </div>
-
-
-        <!-- COPYRIGHT -->
-
-        <div class="footer-bottom">
-
-            <p>
-
-                © 2026 Borgo della Bellezza
-
-                <span>|</span>
-
-                P.IVA 01234567890
-
-                <span>|</span>
-
- 
