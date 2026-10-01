@@ -13,6 +13,10 @@
     --line: #C5CEC8;
     --white: #FCFDF9;
 
+    --footer-dark: #243831;
+    --footer-text: #C8D2CC;
+    --footer-line: rgba(255, 255, 255, 0.12);
+
     --max-width: 1200px;
 }
 
@@ -64,20 +68,25 @@ button {
     width: 100%;
     background: rgba(243, 245, 240, 0.97);
     border-bottom: 1px solid var(--line);
+
     position: sticky;
     top: 0;
+
     z-index: 1000;
+
     backdrop-filter: blur(10px);
 }
 
 .header-inner {
     width: min(100% - 50px, var(--max-width));
     min-height: 88px;
+
     margin: 0 auto;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     gap: 30px;
 }
 
@@ -97,20 +106,23 @@ button {
 
 
 /* =====================================================
-   NAVIGAZIONE DESKTOP
+   NAVIGAZIONE
 ===================================================== */
 
 .main-nav {
     display: flex;
     align-items: center;
     justify-content: flex-end;
+
     gap: 34px;
 }
 
 .main-nav a {
     color: var(--green);
+
     font-size: 16px;
     font-weight: 500;
+
     transition: 0.25s ease;
 }
 
@@ -120,8 +132,10 @@ button {
 
 .main-nav .nav-button {
     padding: 11px 23px;
+
     background: var(--green);
     color: var(--white);
+
     border: 1px solid var(--green);
     border-radius: 3px;
 }
@@ -133,7 +147,7 @@ button {
 
 
 /* =====================================================
-   PULSANTE MENU MOBILE
+   MENU MOBILE
 ===================================================== */
 
 .menu-toggle {
@@ -208,6 +222,7 @@ button {
 
 .hero-content {
     width: min(100% - 50px, var(--max-width));
+
     margin: 0 auto;
 
     padding: 100px 0;
@@ -234,7 +249,9 @@ button {
     font-family: Georgia, "Times New Roman", serif;
 
     font-size: clamp(52px, 7vw, 92px);
+
     line-height: 1.03;
+
     font-weight: 400;
 
     letter-spacing: -2px;
@@ -248,12 +265,14 @@ button {
     color: var(--green-text);
 
     font-size: 19px;
+
     line-height: 1.8;
 }
 
 .hero-buttons {
     display: flex;
     align-items: center;
+
     gap: 30px;
 }
 
@@ -264,6 +283,7 @@ button {
 
 .button {
     display: inline-flex;
+
     align-items: center;
     justify-content: center;
 
@@ -337,7 +357,9 @@ button {
     font-family: Georgia, "Times New Roman", serif;
 
     font-size: clamp(42px, 6vw, 68px);
+
     line-height: 1.1;
+
     font-weight: 400;
 
     letter-spacing: -1px;
@@ -353,7 +375,7 @@ button {
 
 
 /* =====================================================
-   SEZIONI GENERALI
+   SEZIONI
 ===================================================== */
 
 .section {
@@ -467,7 +489,9 @@ button {
     font-family: Georgia, "Times New Roman", serif;
 
     font-size: 28px;
+
     line-height: 1.2;
+
     font-weight: 400;
 }
 
@@ -475,11 +499,13 @@ button {
     color: var(--green-text);
 
     font-size: 16px;
+
     line-height: 1.65;
 }
 
 .service-card a {
     margin-top: auto;
+
     padding-top: 30px;
 
     font-size: 15px;
@@ -530,6 +556,7 @@ button {
     font-size: 13px;
 
     letter-spacing: 0;
+
     font-weight: 400;
 }
 
@@ -659,7 +686,9 @@ button {
 }
 
 
-/* IMMAGINE FOOTER */
+/* =====================================================
+   IMMAGINE FOOTER
+===================================================== */
 
 .footer-image {
     width: 100%;
@@ -681,7 +710,9 @@ button {
 }
 
 
-/* CONTENUTO FOOTER */
+/* =====================================================
+   CONTENUTO FOOTER
+===================================================== */
 
 .footer-content {
     width: min(100% - 50px, var(--max-width));
@@ -701,16 +732,32 @@ button {
     gap: 45px;
 
     align-items: start;
+
+    background: var(--green);
 }
 
 
-/* COLONNE */
+/* =====================================================
+   COLONNE FOOTER
+===================================================== */
 
 .footer-column {
     display: flex;
 
     gap: 18px;
 }
+
+
+/* DIVISIONE TRA LE COLONNE */
+
+.footer-column + .footer-column {
+    border-left: 1px solid var(--footer-line);
+
+    padding-left: 35px;
+}
+
+
+/* ICONA */
 
 .footer-icon {
     width: 32px;
@@ -722,15 +769,22 @@ button {
     align-items: center;
     justify-content: center;
 
-    border: 1px solid rgba(252, 253, 249, 0.35);
+    border: 1px solid #7E9488;
 
     border-radius: 50%;
+
+    color: #E4EAE4;
 
     font-size: 14px;
 }
 
+
+/* TITOLI */
+
 .footer-column h3 {
     margin-bottom: 8px;
+
+    color: var(--white);
 
     font-size: 13px;
     font-weight: 700;
@@ -738,11 +792,15 @@ button {
     letter-spacing: 2px;
 }
 
+
+/* TESTI */
+
 .footer-column p,
 .footer-column a {
-    color: rgba(252, 253, 249, 0.75);
+    color: var(--footer-text);
 
     font-size: 15px;
+
     line-height: 1.7;
 }
 
@@ -751,7 +809,9 @@ button {
 }
 
 
-/* SOCIAL */
+/* =====================================================
+   SOCIAL
+===================================================== */
 
 .footer-social {
     display: flex;
@@ -761,10 +821,14 @@ button {
 }
 
 
-/* FRASE */
+/* =====================================================
+   FRASE FOOTER
+===================================================== */
 
 .footer-motto {
     text-align: right;
+
+    padding-left: 25px;
 }
 
 .footer-motto p {
@@ -773,6 +837,7 @@ button {
     color: var(--white);
 
     font-size: 24px;
+
     line-height: 1.35;
 }
 
@@ -781,34 +846,42 @@ button {
 
     margin-top: 15px;
 
-    color: rgba(252, 253, 249, 0.6);
+    color: #AEBBB4;
 
     font-size: 18px;
 }
 
 
-/* BOTTOM */
+/* =====================================================
+   COPYRIGHT
+===================================================== */
 
 .footer-bottom {
+    width: 100%;
+
+    background: var(--footer-dark);
+
+    border-top: 1px solid var(--footer-line);
+
+    text-align: center;
+}
+
+.footer-bottom p {
     width: min(100% - 50px, var(--max-width));
 
     margin: 0 auto;
 
     padding: 22px 0;
 
-    border-top: 1px solid rgba(252, 253, 249, 0.18);
-
-    text-align: center;
-}
-
-.footer-bottom p {
-    color: rgba(252, 253, 249, 0.6);
+    color: #AEBBB4;
 
     font-size: 13px;
 }
 
 .footer-bottom span {
     margin: 0 8px;
+
+    color: #71857B;
 }
 
 
@@ -828,6 +901,8 @@ button {
 
     .footer-motto {
         text-align: left;
+
+        padding-left: 0;
     }
 
 }
@@ -864,7 +939,7 @@ button {
     }
 
 
-    /* MOSTRA PULSANTE */
+    /* MENU BUTTON */
 
     .menu-toggle {
         display: flex;
@@ -898,9 +973,8 @@ button {
         box-shadow:
             0 15px 30px rgba(48, 74, 66, 0.10);
 
-        /* NASCOSTO */
-
         opacity: 0;
+
         visibility: hidden;
 
         transform: translateY(-10px);
@@ -913,9 +987,6 @@ button {
             transform 0.25s ease;
     }
 
-
-    /* MENU APERTO */
-
     .main-nav.active {
         opacity: 1;
 
@@ -927,7 +998,7 @@ button {
     }
 
 
-    /* LINK MENU */
+    /* LINK */
 
     .main-nav a {
         width: 100%;
@@ -955,7 +1026,7 @@ button {
     }
 
 
-    /* BOTTONE PRENOTA */
+    /* PRENOTA */
 
     .main-nav .nav-button {
         width: calc(100% - 30px);
@@ -978,7 +1049,9 @@ button {
     }
 
 
-    /* HERO */
+    /* =================================================
+       HERO
+    ================================================= */
 
     .hero {
         min-height: 620px;
@@ -1027,7 +1100,9 @@ button {
     }
 
 
-    /* INTRO */
+    /* =================================================
+       INTRO
+    ================================================= */
 
     .intro {
         width: calc(100% - 40px);
@@ -1045,7 +1120,9 @@ button {
     }
 
 
-    /* SEZIONI */
+    /* =================================================
+       SEZIONI
+    ================================================= */
 
     .section {
         width: calc(100% - 40px);
@@ -1058,7 +1135,9 @@ button {
     }
 
 
-    /* CHI SIAMO */
+    /* =================================================
+       CHI SIAMO
+    ================================================= */
 
     .about {
         grid-template-columns: 1fr;
@@ -1071,7 +1150,9 @@ button {
     }
 
 
-    /* SERVIZI */
+    /* =================================================
+       SERVIZI
+    ================================================= */
 
     .services-grid {
         grid-template-columns: 1fr;
@@ -1094,7 +1175,9 @@ button {
     }
 
 
-    /* LISTINO */
+    /* =================================================
+       LISTINO
+    ================================================= */
 
     .price-category {
         padding: 35px 0;
@@ -1113,7 +1196,9 @@ button {
     }
 
 
-    /* CONTATTI */
+    /* =================================================
+       CONTATTI
+    ================================================= */
 
     .contact {
         grid-template-columns: 1fr;
@@ -1143,15 +1228,35 @@ button {
         object-fit: cover;
     }
 
-    .footer-content {
-        width: calc(100% - 40px);
 
-        padding: 55px 0;
+    .footer-content {
+        width: 100%;
+
+        padding: 50px 20px;
 
         grid-template-columns: 1fr;
 
-        gap: 35px;
+        gap: 0;
+
+        background: var(--green);
     }
+
+
+    /* TOGLIE LE LINEE VERTICALI
+       E LE TRASFORMA IN ORIZZONTALI */
+
+    .footer-column + .footer-column {
+        border-left: none;
+
+        border-top: 1px solid var(--footer-line);
+
+        padding-left: 0;
+
+        padding-top: 25px;
+
+        margin-top: 25px;
+    }
+
 
     .footer-column {
         gap: 15px;
@@ -1166,23 +1271,39 @@ button {
         font-size: 16px;
     }
 
+
+    /* FRASE */
+
     .footer-motto {
         text-align: left;
 
-        padding-top: 10px;
+        padding-left: 0;
+
+        padding-top: 35px;
+
+        margin-top: 35px;
+
+        border-top: 1px solid var(--footer-line);
     }
 
     .footer-motto p {
         font-size: 25px;
     }
 
-    .footer-bottom {
-        width: calc(100% - 40px);
 
-        padding: 22px 0;
+    /* COPYRIGHT */
+
+    .footer-bottom {
+        width: 100%;
+
+        background: var(--footer-dark);
     }
 
     .footer-bottom p {
+        width: calc(100% - 40px);
+
+        padding: 22px 0;
+
         font-size: 12px;
 
         line-height: 1.7;
@@ -1195,45 +1316,4 @@ button {
    MOBILE PICCOLO
 ===================================================== */
 
-@media (max-width: 400px) {
-
-    .header-inner {
-        padding: 0 16px;
-    }
-
-    .logo img {
-        width: 115px;
-    }
-
-    .hero-content {
-        width: calc(100% - 32px);
-    }
-
-    .section,
-    .intro {
-        width: calc(100% - 32px);
-    }
-
-    .hero h1 {
-        font-size: 46px;
-    }
-
-    .intro h2,
-    .section-heading h2 {
-        font-size: 39px;
-    }
-
-    .price-row {
-        font-size: 15px;
-    }
-
-    .price-row strong {
-        font-size: 15px;
-    }
-
-    .footer-content,
-    .footer-bottom {
-        width: calc(100% - 32px);
-    }
-
-}
+@media (max-widt
