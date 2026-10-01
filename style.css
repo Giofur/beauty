@@ -45,7 +45,7 @@ img {
 .site-header {
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 2000;
 
     background: rgba(243, 245, 240, .95);
     border-bottom: 1px solid var(--line);
@@ -141,7 +141,7 @@ img {
     gap: 5px;
 
     position: relative;
-    z-index: 1100;
+    z-index: 2300;
 }
 
 .menu-toggle span {
@@ -779,7 +779,9 @@ em {
     }
 
 
-    /* HEADER */
+    /* =====================================
+       HEADER MOBILE
+       ===================================== */
 
     .header-container {
         min-height: 70px;
@@ -791,11 +793,17 @@ em {
         justify-content: space-between;
 
         gap: 0;
+
+        position: relative;
+        z-index: 2100;
     }
 
     .logo {
         display: block;
         flex-shrink: 0;
+
+        position: relative;
+        z-index: 2200;
     }
 
     .logo img {
@@ -803,26 +811,39 @@ em {
     }
 
 
-    /* HAMBURGER */
+    /* =====================================
+       HAMBURGER
+       ===================================== */
 
     .menu-toggle {
         display: flex !important;
         flex-shrink: 0;
 
+        position: relative;
+        z-index: 2300;
+
         visibility: visible !important;
     }
 
 
-    /* MOBILE MENU */
+    /* =====================================
+       MENU MOBILE
+       
+       100% DELLO SCHERMO IN LARGHEZZA
+       ALTEZZA SOLO DEL CONTENUTO
+       ===================================== */
 
     .navigation {
         position: absolute;
 
         top: 100%;
-        left: 15px;
-        right: 15px;
+        left: 50%;
 
-        width: auto !important;
+        width: 100vw !important;
+
+        height: auto !important;
+        min-height: 0 !important;
+        max-height: none !important;
 
         display: flex !important;
         flex-direction: column !important;
@@ -832,12 +853,13 @@ em {
 
         gap: 0 !important;
 
-        padding: 8px 0 !important;
+        padding: 12px 0 !important;
         margin: 0;
 
         background: rgba(243, 245, 240, .98);
 
-        border: 1px solid var(--line);
+        border-top: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
 
         box-shadow:
             0 12px 30px rgba(48, 74, 66, .10);
@@ -845,7 +867,7 @@ em {
         opacity: 0;
         visibility: hidden;
 
-        transform: translateY(-10px);
+        transform: translate(-50%, -10px);
 
         transition:
             opacity .25s ease,
@@ -854,27 +876,46 @@ em {
 
         pointer-events: none;
 
-        z-index: 1050;
+        z-index: 2150;
     }
+
+
+    /* =====================================
+       MENU APERTO
+       ===================================== */
 
     .navigation.menu-open {
         opacity: 1;
         visibility: visible;
 
-        transform: translateY(0);
+        transform: translate(-50%, 0);
 
         pointer-events: auto;
     }
 
+
+    /* =====================================
+       VOCI MENU
+       ===================================== */
+
     .navigation a {
         width: 100% !important;
 
-        padding: 16px 20px !important;
+        min-height: 68px;
 
-        font-size: 9px !important;
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        padding: 20px !important;
+
+        font-size: 10px !important;
         font-weight: 600;
 
         letter-spacing: .16em;
+
+        text-align: center;
 
         white-space: normal;
 
@@ -893,16 +934,25 @@ em {
 
     .navigation a:hover {
         opacity: 1;
+
         background: var(--paper-dark);
-        padding-left: 25px !important;
+
+        padding-left: 20px !important;
     }
+
+
+    /* =====================================
+       NASCONDE PRENOTA
+       ===================================== */
 
     .header-button {
         display: none !important;
     }
 
 
-    /* HAMBURGER → X */
+    /* =====================================
+       HAMBURGER → X
+       ===================================== */
 
     .menu-toggle.active span:nth-child(1) {
         transform: translateY(7px) rotate(45deg);
@@ -917,7 +967,9 @@ em {
     }
 
 
-    /* HERO */
+    /* =====================================
+       HERO
+       ===================================== */
 
     .hero {
         min-height: auto;
@@ -960,7 +1012,9 @@ em {
     }
 
 
-    /* ABOUT */
+    /* =====================================
+       ABOUT
+       ===================================== */
 
     .about,
     .services,
@@ -974,7 +1028,9 @@ em {
     }
 
 
-    /* SERVICES */
+    /* =====================================
+       SERVICES
+       ===================================== */
 
     .services-grid {
         grid-template-columns: 1fr;
@@ -989,7 +1045,9 @@ em {
     }
 
 
-    /* LISTINO */
+    /* =====================================
+       LISTINO
+       ===================================== */
 
     .price-section {
         padding: 80px 0;
@@ -1005,14 +1063,18 @@ em {
     }
 
 
-    /* CONTACT */
+    /* =====================================
+       CONTACT
+       ===================================== */
 
     .contact-section {
         padding: 80px 0;
     }
 
 
-    /* FOOTER */
+    /* =====================================
+       FOOTER
+       ===================================== */
 
     .footer-container {
         grid-template-columns: 1fr;
@@ -1057,6 +1119,11 @@ em {
     .hero-box-text strong {
         font-size: 50px;
     }
+
+    .navigation a {
+        min-height: 64px;
+        padding: 18px 15px !important;
+    }
 }
 
 
@@ -1072,143 +1139,15 @@ em {
 
     .navigation {
         position: static;
+
+        width: auto;
+        height: auto;
+
         opacity: 1;
         visibility: visible;
+
         transform: none;
-        pointer-events: auto;
-    }
-}
-
-
-
-        min-height: 75px;
-
-        padding: 0 10px !important;
-
-        font-size: 13px !important;
-        font-weight: 600;
-
-        letter-spacing: .18em;
-
-        color: var(--green);
-
-        border-bottom: 1px solid var(--line);
-
-        opacity: 1 !important;
-    }
-
-    .navigation a:first-child {
-        border-top: 1px solid var(--line);
-    }
-
-
-    /* HEADER SOPRA IL MENU */
-
-    .site-header {
-        z-index: 2000;
-    }
-
-    .header-container {
-        position: relative;
-        z-index: 2100;
-    }
-
-
-    /* HAMBURGER / X */
-
-    .menu-toggle {
-        display: flex !important;
-
-        position: relative;
-
-        z-index: 2200;
-
-        flex-shrink: 0;
-    }
-
-
-    /* X */
-
-    .menu-toggle.active span:nth-child(1) {
-        transform: translateY(7px) rotate(45deg);
-    }
-
-    .menu-toggle.active span:nth-child(2) {
-        opacity: 0 !important;
-    }
-
-    .menu-toggle.active span:nth-child(3) {
-        transform: translateY(-7px) rotate(-45deg);
-    }
-
-
-    /* NASCONDE PRENOTA */
-
-    .header-button {
-        display: none !important;
-    }
-}
-
-/* =========================================
-   MENU MOBILE A TUTTA LARGHEZZA
-   ========================================= */
-
-@media (max-width: 600px) {
-
-    .navigation {
-        position: fixed;
-
-        top: 0;
-        left: 0;
-        right: 0;
-
-        width: 100vw !important;
-        height: 100dvh;
-
-        display: flex !important;
-        flex-direction: column !important;
-
-        align-items: stretch !important;
-        justify-content: center !important;
-
-        gap: 0 !important;
-
-        padding: 100px 30px 40px !important;
-        margin: 0;
-
-        background: var(--paper);
-
-        border: none;
-
-        box-shadow: none;
-
-        opacity: 1;
-        visibility: visible;
-
-        transform: translateY(-100%);
-
-        transition:
-            transform .4s cubic-bezier(.77, 0, .175, 1);
-
-        pointer-events: none;
-
-        z-index: 1050;
-    }
-
-
-    /* MENU APERTO */
-
-    .navigation.menu-open {
-        transform: translateY(0);
 
         pointer-events: auto;
     }
-
-
-    /* VOCI */
-
-    .navigation a {
-        width: 100% !important;
-
-        display: flex;
-        align-items: center;
+}
