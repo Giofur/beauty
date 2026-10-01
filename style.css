@@ -594,7 +594,7 @@ em {
 .footer-logo {
     width: 190px;
 
-    filter: brightness(0) invert(1);
+    filter: none;
     opacity: .9;
 }
 
