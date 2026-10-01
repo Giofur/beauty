@@ -19,28 +19,49 @@
 <body>
 
 <header class="site-header">
+
     <div class="header-container">
 
         <a href="#" class="logo">
             <img src="logo.png" alt="Borgo della Bellezza">
         </a>
 
-        <nav class="navigation">
+        <!-- MENU DESKTOP / MOBILE -->
+        <nav class="navigation" id="main-navigation">
+
             <a href="#servizi">Servizi</a>
             <a href="#listino">Listino</a>
             <a href="#chi-siamo">Chi siamo</a>
             <a href="#contatti">Contatti</a>
+
         </nav>
 
-        <a href="#contatti" class="header-button">Prenota</a>
+        <a href="#contatti" class="header-button">
+            Prenota
+        </a>
+
+        <!-- HAMBURGER MOBILE -->
+        <button
+            class="menu-toggle"
+            id="menu-toggle"
+            aria-label="Apri menu"
+            aria-expanded="false"
+            aria-controls="main-navigation"
+        >
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
 
     </div>
+
 </header>
 
 
 <main>
 
 <section class="hero">
+
     <div class="hero-container">
 
         <div class="hero-content">
@@ -60,6 +81,7 @@
             </p>
 
             <div class="hero-buttons">
+
                 <a href="#servizi" class="button button-dark">
                     Scopri i trattamenti
                 </a>
@@ -67,6 +89,7 @@
                 <a href="#listino" class="simple-link">
                     Vedi il listino →
                 </a>
+
             </div>
 
         </div>
@@ -81,8 +104,11 @@
                 </span>
 
                 <div class="hero-box-text">
+
                     <span>La cura</span>
+
                     <strong>di te.</strong>
+
                 </div>
 
                 <p>
@@ -94,6 +120,7 @@
         </div>
 
     </div>
+
 </section>
 
 
@@ -248,7 +275,6 @@
 
     <div class="price-container">
 
-
         <div class="price-introduction">
 
             <span class="eyebrow">
@@ -269,7 +295,6 @@
 
 
         <div class="price-list">
-
 
             <div id="manicure" class="price-category">
                 MANICURE &amp; PEDICURE
@@ -560,6 +585,7 @@
 
                 <div>
                     <span>TELEFONO</span>
+
                     <a href="tel:+390000000000">
                         +39 000 000 0000
                     </a>
@@ -567,6 +593,7 @@
 
                 <div>
                     <span>EMAIL</span>
+
                     <a href="mailto:info@borgodellabellezza.it">
                         info@borgodellabellezza.it
                     </a>
@@ -574,6 +601,7 @@
 
                 <div>
                     <span>INDIRIZZO</span>
+
                     <p>
                         Inserisci qui l'indirizzo del centro
                     </p>
@@ -606,9 +634,11 @@
         >
 
         <div class="footer-links">
+
             <a href="#servizi">Servizi</a>
             <a href="#listino">Listino</a>
             <a href="#contatti">Contatti</a>
+
         </div>
 
         <div class="copyright">
@@ -618,6 +648,39 @@
     </div>
 
 </footer>
+
+
+<script>
+
+const menuToggle = document.getElementById("menu-toggle");
+const navigation = document.getElementById("main-navigation");
+
+menuToggle.addEventListener("click", () => {
+
+    const isOpen = navigation.classList.toggle("menu-open");
+
+    menuToggle.classList.toggle("active", isOpen);
+
+    menuToggle.setAttribute("aria-expanded", isOpen);
+
+});
+
+
+/* Chiude il menu quando si clicca su una voce */
+
+document.querySelectorAll(".navigation a").forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        navigation.classList.remove("menu-open");
+        menuToggle.classList.remove("active");
+        menuToggle.setAttribute("aria-expanded", "false");
+
+    });
+
+});
+
+</script>
 
 </body>
 </html>
