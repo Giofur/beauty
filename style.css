@@ -1355,3 +1355,141 @@ em {
         pointer-events: auto;
     }
 }
+
+/* =========================================
+   TESTI MOBILE - PIÙ GRANDI
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    body {
+        font-size: 17px;
+        line-height: 1.75;
+    }
+
+    h1 {
+        font-size: 59px;
+        line-height: 1.02;
+    }
+
+    h2 {
+        font-size: 50px;
+        line-height: 1.05;
+    }
+
+    h3 {
+        font-size: 32px;
+        line-height: 1.1;
+    }
+
+    .eyebrow {
+        font-size: 12px;
+        letter-spacing: .19em;
+    }
+
+    /* HERO */
+    .hero-content > p {
+        font-size: 18px;
+        line-height: 1.8;
+    }
+
+    .button {
+        font-size: 12px;
+    }
+
+    .simple-link {
+        font-size: 13px;
+    }
+
+    .hero-small-title {
+        font-size: 12px;
+    }
+
+    .hero-box-text span {
+        font-size: 39px;
+    }
+
+    .hero-box-text strong {
+        font-size: 65px;
+    }
+
+    .hero-box p {
+        font-size: 14px;
+        line-height: 1.75;
+    }
+
+    /* ABOUT */
+    .about-text {
+        font-size: 17px;
+        line-height: 1.85;
+    }
+
+    /* SERVIZI */
+    .service-number {
+        font-size: 12px;
+    }
+
+    .service-card h3 {
+        font-size: 32px;
+    }
+
+    .service-card p {
+        font-size: 14px;
+        line-height: 1.85;
+    }
+
+    .service-card a {
+        font-size: 12px;
+    }
+
+    /* LISTINO */
+    .price-category {
+        font-size: 12px;
+    }
+
+    .price-category small {
+        font-size: 11px;
+    }
+
+    .price-row {
+        font-size: 14px;
+        min-height: 60px;
+    }
+
+    .price-note {
+        font-size: 14px;
+    }
+
+    .price-note span {
+        font-size: 13px;
+    }
+
+    /* CONTATTI */
+    .contact-content > p {
+        font-size: 17px;
+        line-height: 1.85;
+    }
+
+    .contact-details span {
+        font-size: 11px;
+    }
+
+    .contact-details a,
+    .contact-details p {
+        font-size: 15px;
+    }
+
+    /* MENU */
+    .navigation a {
+        font-size: 13px !important;
+    }
+
+    /* FOOTER */
+    .footer-links a {
+        font-size: 11px;
+    }
+
+    .copyright {
+        font-size: 11px;
+    }
+}
