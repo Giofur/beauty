@@ -37,22 +37,29 @@ img {
     display: block;
 }
 
+
+/* HEADER */
+
 .site-header {
     position: sticky;
     top: 0;
     z-index: 1000;
+
     background: rgba(243, 245, 240, .95);
     border-bottom: 1px solid var(--line);
+
     backdrop-filter: blur(10px);
 }
 
 .header-container {
     width: min(1200px, calc(100% - 50px));
     min-height: 90px;
+
     margin: auto;
 
     display: grid;
     grid-template-columns: 1fr auto auto;
+
     align-items: center;
     gap: 40px;
 }
@@ -72,6 +79,7 @@ img {
     font-weight: 600;
     letter-spacing: .14em;
     text-transform: uppercase;
+
     transition: opacity .25s ease;
 }
 
@@ -617,19 +625,28 @@ em {
 }
 
 
-/* RESPONSIVE */
+/* RESPONSIVE - TABLET */
 
 @media (max-width: 950px) {
 
     .header-container {
-        grid-template-columns: 1fr auto;
+        grid-template-columns: 1fr;
+        min-height: 75px;
+        gap: 0;
     }
 
     .navigation {
-        grid-column: 1 / -1;
-        grid-row: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
-        padding-bottom: 18px;
+        grid-column: auto;
+        grid-row: auto;
+
+        padding: 0 0 15px;
+        gap: 22px;
+
+        flex-wrap: nowrap;
     }
 
     .header-button {
@@ -679,6 +696,8 @@ em {
 }
 
 
+/* RESPONSIVE - MOBILE */
+
 @media (max-width: 600px) {
 
     .header-container,
@@ -690,8 +709,18 @@ em {
         width: calc(100% - 30px);
     }
 
+    /* HEADER MOBILE */
+
     .header-container {
-        min-height: 85px;
+        min-height: 70px;
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: center;
+
+        gap: 10px;
     }
 
     .logo img {
@@ -699,14 +728,27 @@ em {
     }
 
     .navigation {
-        gap: 16px;
-        flex-wrap: wrap;
-        justify-content: flex-start;
+        width: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        gap: 18px;
+
+        padding: 0 0 12px;
+
+        flex-wrap: nowrap;
+        white-space: nowrap;
     }
 
     .navigation a {
         font-size: 8px;
+        letter-spacing: .12em;
     }
+
+
+    /* HERO */
 
     .hero-container {
         padding: 65px 0;
@@ -744,6 +786,9 @@ em {
         font-size: 58px;
     }
 
+
+    /* ABOUT */
+
     .about,
     .services,
     .contact-section {
@@ -754,6 +799,9 @@ em {
         grid-template-columns: 1fr;
         gap: 40px;
     }
+
+
+    /* SERVICES */
 
     .services-grid {
         grid-template-columns: 1fr;
@@ -766,6 +814,9 @@ em {
     .service-number {
         margin-bottom: 45px;
     }
+
+
+    /* LISTINO */
 
     .price-section {
         padding: 80px 0;
@@ -780,12 +831,19 @@ em {
         max-width: 75%;
     }
 
+
+    /* CONTACT */
+
     .contact-section {
         padding: 80px 0;
     }
 
+
+    /* FOOTER */
+
     .footer-container {
         grid-template-columns: 1fr;
+
         padding: 35px 0;
     }
 
@@ -800,6 +858,8 @@ em {
     }
 }
 
+
+/* SMALL MOBILE */
 
 @media (max-width: 380px) {
 
