@@ -1,3 +1,4 @@
+
 :root {
     --green: #304A42;
     --green-soft: #647C70;
@@ -70,6 +71,7 @@ img {
     grid-template-columns: 1fr auto auto;
 
     align-items: center;
+
     gap: 40px;
 }
 
@@ -760,6 +762,7 @@ em {
     justify-self: end;
 
     font-size: 9px;
+
     letter-spacing: .08em;
 }
 
@@ -862,12 +865,12 @@ em {
 
 
     /* -------------------------------------
-       GENERAL TEXT
+       BODY
        ------------------------------------- */
 
     body {
-        font-size: 16px;
-        line-height: 1.7;
+        font-size: 18px;
+        line-height: 1.8;
     }
 
 
@@ -984,22 +987,22 @@ em {
 
 
     /* -------------------------------------
-       MOBILE MENU LINKS
+       MENU LINKS
        ------------------------------------- */
 
     .navigation a {
         width: 100% !important;
 
-        min-height: 68px;
+        min-height: 72px;
 
         display: flex;
 
         align-items: center;
         justify-content: center;
 
-        padding: 20px !important;
+        padding: 22px !important;
 
-        font-size: 12px !important;
+        font-size: 14px !important;
         font-weight: 600;
 
         letter-spacing: .14em;
@@ -1026,7 +1029,7 @@ em {
 
         background: var(--paper-dark);
 
-        padding-left: 20px !important;
+        padding-left: 22px !important;
     }
 
 
@@ -1057,6 +1060,35 @@ em {
 
 
     /* -------------------------------------
+       TITLES
+       ------------------------------------- */
+
+    h1 {
+        font-size: 64px;
+
+        line-height: 1;
+    }
+
+    h2 {
+        font-size: 54px;
+
+        line-height: 1.03;
+    }
+
+    h3 {
+        font-size: 35px;
+
+        line-height: 1.1;
+    }
+
+    .eyebrow {
+        font-size: 13px;
+
+        letter-spacing: .18em;
+    }
+
+
+    /* -------------------------------------
        HERO
        ------------------------------------- */
 
@@ -1068,30 +1100,10 @@ em {
         padding: 65px 0;
     }
 
-    h1 {
-        font-size: 56px;
-        line-height: 1.02;
-    }
-
-    h2 {
-        font-size: 47px;
-        line-height: 1.05;
-    }
-
-    h3 {
-        font-size: 30px;
-    }
-
-    .eyebrow {
-        font-size: 11px;
-
-        letter-spacing: .20em;
-    }
-
     .hero-content > p {
-        font-size: 17px;
+        font-size: 19px;
 
-        line-height: 1.8;
+        line-height: 1.85;
     }
 
     .hero-buttons {
@@ -1099,19 +1111,19 @@ em {
 
         align-items: flex-start;
 
-        gap: 22px;
+        gap: 25px;
     }
 
     .button {
-        min-height: 50px;
+        min-height: 54px;
 
-        padding: 0 27px;
+        padding: 0 30px;
 
-        font-size: 11px;
+        font-size: 13px;
     }
 
     .simple-link {
-        font-size: 12px;
+        font-size: 14px;
     }
 
 
@@ -1132,21 +1144,21 @@ em {
     }
 
     .hero-small-title {
-        font-size: 11px;
+        font-size: 13px;
     }
 
     .hero-box-text span {
-        font-size: 37px;
+        font-size: 43px;
     }
 
     .hero-box-text strong {
-        font-size: 62px;
+        font-size: 70px;
     }
 
     .hero-box p {
-        font-size: 13px;
+        font-size: 15px;
 
-        line-height: 1.7;
+        line-height: 1.8;
     }
 
 
@@ -1167,9 +1179,9 @@ em {
     }
 
     .about-text {
-        font-size: 16px;
+        font-size: 18px;
 
-        line-height: 1.8;
+        line-height: 1.9;
     }
 
 
@@ -1188,21 +1200,21 @@ em {
     .service-number {
         margin-bottom: 45px;
 
-        font-size: 11px;
+        font-size: 13px;
     }
 
     .service-card h3 {
-        font-size: 30px;
+        font-size: 35px;
     }
 
     .service-card p {
-        font-size: 13px;
+        font-size: 15px;
 
-        line-height: 1.8;
+        line-height: 1.9;
     }
 
     .service-card a {
-        font-size: 11px;
+        font-size: 13px;
     }
 
 
@@ -1215,17 +1227,17 @@ em {
     }
 
     .price-category {
-        font-size: 11px;
+        font-size: 13px;
     }
 
     .price-category small {
-        font-size: 10px;
+        font-size: 12px;
     }
 
     .price-row {
-        min-height: 58px;
+        min-height: 64px;
 
-        font-size: 13px;
+        font-size: 15px;
     }
 
     .price-row span {
@@ -1233,11 +1245,13 @@ em {
     }
 
     .price-note {
-        font-size: 13px;
+        font-size: 15px;
+
+        line-height: 1.8;
     }
 
     .price-note span {
-        font-size: 12px;
+        font-size: 14px;
     }
 
 
@@ -1250,18 +1264,18 @@ em {
     }
 
     .contact-content > p {
-        font-size: 16px;
+        font-size: 18px;
 
-        line-height: 1.8;
+        line-height: 1.9;
     }
 
     .contact-details span {
-        font-size: 10px;
+        font-size: 12px;
     }
 
     .contact-details a,
     .contact-details p {
-        font-size: 14px;
+        font-size: 16px;
     }
 
 
@@ -1282,7 +1296,7 @@ em {
     }
 
     .footer-links a {
-        font-size: 10px;
+        font-size: 12px;
     }
 
     .copyright {
@@ -1290,7 +1304,7 @@ em {
 
         padding: 0;
 
-        font-size: 10px;
+        font-size: 12px;
     }
 }
 
@@ -1310,23 +1324,27 @@ em {
     }
 
     h1 {
-        font-size: 48px;
-    }
-
-    h2 {
-        font-size: 40px;
-    }
-
-    .hero-box-text strong {
         font-size: 54px;
     }
 
+    h2 {
+        font-size: 45px;
+    }
+
+    h3 {
+        font-size: 31px;
+    }
+
+    .hero-box-text strong {
+        font-size: 60px;
+    }
+
     .navigation a {
-        min-height: 64px;
+        min-height: 70px;
 
-        padding: 18px 15px !important;
+        padding: 20px 15px !important;
 
-        font-size: 12px !important;
+        font-size: 14px !important;
     }
 }
 
@@ -1353,143 +1371,5 @@ em {
         transform: none;
 
         pointer-events: auto;
-    }
-}
-
-/* =========================================
-   TESTI MOBILE - PIÙ GRANDI
-   ========================================= */
-
-@media (max-width: 600px) {
-
-    body {
-        font-size: 17px;
-        line-height: 1.75;
-    }
-
-    h1 {
-        font-size: 59px;
-        line-height: 1.02;
-    }
-
-    h2 {
-        font-size: 50px;
-        line-height: 1.05;
-    }
-
-    h3 {
-        font-size: 32px;
-        line-height: 1.1;
-    }
-
-    .eyebrow {
-        font-size: 12px;
-        letter-spacing: .19em;
-    }
-
-    /* HERO */
-    .hero-content > p {
-        font-size: 18px;
-        line-height: 1.8;
-    }
-
-    .button {
-        font-size: 12px;
-    }
-
-    .simple-link {
-        font-size: 13px;
-    }
-
-    .hero-small-title {
-        font-size: 12px;
-    }
-
-    .hero-box-text span {
-        font-size: 39px;
-    }
-
-    .hero-box-text strong {
-        font-size: 65px;
-    }
-
-    .hero-box p {
-        font-size: 14px;
-        line-height: 1.75;
-    }
-
-    /* ABOUT */
-    .about-text {
-        font-size: 17px;
-        line-height: 1.85;
-    }
-
-    /* SERVIZI */
-    .service-number {
-        font-size: 12px;
-    }
-
-    .service-card h3 {
-        font-size: 32px;
-    }
-
-    .service-card p {
-        font-size: 14px;
-        line-height: 1.85;
-    }
-
-    .service-card a {
-        font-size: 12px;
-    }
-
-    /* LISTINO */
-    .price-category {
-        font-size: 12px;
-    }
-
-    .price-category small {
-        font-size: 11px;
-    }
-
-    .price-row {
-        font-size: 14px;
-        min-height: 60px;
-    }
-
-    .price-note {
-        font-size: 14px;
-    }
-
-    .price-note span {
-        font-size: 13px;
-    }
-
-    /* CONTATTI */
-    .contact-content > p {
-        font-size: 17px;
-        line-height: 1.85;
-    }
-
-    .contact-details span {
-        font-size: 11px;
-    }
-
-    .contact-details a,
-    .contact-details p {
-        font-size: 15px;
-    }
-
-    /* MENU */
-    .navigation a {
-        font-size: 13px !important;
-    }
-
-    /* FOOTER */
-    .footer-links a {
-        font-size: 11px;
-    }
-
-    .copyright {
-        font-size: 11px;
     }
 }
