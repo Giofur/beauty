@@ -211,13 +211,19 @@ button {
 
     position: relative;
 
-    background:
+    background-image:
         linear-gradient(
             90deg,
-            rgba(243, 245, 240, 0.98) 0%,
-            rgba(243, 245, 240, 0.92) 45%,
-            rgba(243, 245, 240, 0.35) 100%
-        );
+            rgba(243, 245, 240, 0.78) 0%,
+            rgba(243, 245, 240, 0.62) 38%,
+            rgba(243, 245, 240, 0.25) 65%,
+            rgba(243, 245, 240, 0) 100%
+        ),
+        url("sfondo.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .hero-content {
@@ -1316,4 +1322,41 @@ button {
    MOBILE PICCOLO
 ===================================================== */
 
-@media (max-widt
+@media (max-width: 400px) {
+
+    .header-inner {
+        padding: 0 15px;
+    }
+
+    .logo img {
+        width: 115px;
+    }
+
+    .hero-overlay {
+        width: calc(100% - 30px);
+        padding-bottom: 25px;
+    }
+
+    .hero {
+        height: 470px;
+    }
+
+    .hero-buttons .button {
+        width: 100%;
+    }
+
+    .intro,
+    .section {
+        width: calc(100% - 30px);
+    }
+
+    .section-heading h2,
+    .intro h2 {
+        font-size: 40px;
+    }
+
+    .price-row {
+        gap: 12px;
+    }
+
+}
