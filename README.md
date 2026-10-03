@@ -1,1 +1,1 @@
-# beauty
+🌿 Sito web di Borgo della Bellezza, centro dedicato alla bellezza, al benessere e alla cura della persona. Design moderno, elegante e responsive.
