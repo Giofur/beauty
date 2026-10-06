@@ -2,24 +2,18 @@
     --green: #304A42;
     --green-soft: #647C70;
     --green-text: #68756F;
-
     --paper: #F3F5F0;
     --paper-dark: #E4EAE4;
-
     --line: #C5CEC8;
     --white: #FCFDF9;
-
     --footer-dark: #243831;
     --footer-text: #C8D2CC;
     --footer-line: rgba(255, 255, 255, 0.12);
-
     --max-width: 1200px;
 }
 
 
-/* =====================================================
-   RESET
-===================================================== */
+/* RESET */
 
 * {
     margin: 0;
@@ -30,9 +24,15 @@
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 100px;
+    width: 100%;
+    min-height: 100%;
 }
 
 body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
     font-family: Arial, Helvetica, sans-serif;
     background: var(--paper);
     color: var(--green);
@@ -41,9 +41,20 @@ body {
     overflow-x: hidden;
 }
 
+main {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
 img {
     max-width: 100%;
     display: block;
+}
+
+iframe {
+    display: block;
+    max-width: 100%;
 }
 
 a {
@@ -56,12 +67,11 @@ button {
 }
 
 
-/* =====================================================
-   HEADER
-===================================================== */
+/* HEADER */
 
 .site-header {
     width: 100%;
+    margin: 0;
     background: rgba(243, 245, 240, 0.97);
     border-bottom: 1px solid var(--line);
     position: sticky;
@@ -71,14 +81,13 @@ button {
 }
 
 .header-inner {
-    width: min(100% - 50px, var(--max-width));
+    width: min(calc(100% - 50px), var(--max-width));
     min-height: 88px;
     margin: 0 auto;
-
+    padding: 4px 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     gap: 30px;
 }
 
@@ -86,17 +95,13 @@ button {
     display: flex;
     align-items: center;
     flex-shrink: 0;
+    padding: 4px 0;
 }
 
 .logo img {
     width: 145px;
     height: auto;
 }
-
-
-/* =====================================================
-   NAVIGAZIONE
-===================================================== */
 
 .main-nav {
     display: flex;
@@ -118,10 +123,8 @@ button {
 
 .main-nav .nav-button {
     padding: 11px 23px;
-
     background: var(--green);
     color: var(--white);
-
     border: 1px solid var(--green);
     border-radius: 3px;
 }
@@ -132,40 +135,28 @@ button {
 }
 
 
-/* =====================================================
-   MENU MOBILE
-===================================================== */
+/* MENU MOBILE */
 
 .menu-toggle {
     display: none;
-
     width: 48px;
     height: 48px;
-
     border: 1px solid var(--line);
     background: transparent;
-
     align-items: center;
     justify-content: center;
     flex-direction: column;
-
     gap: 6px;
     cursor: pointer;
-
     border-radius: 3px;
 }
 
 .menu-toggle span {
     display: block;
-
     width: 23px;
     height: 2px;
-
     background: var(--green);
-
-    transition:
-        transform 0.3s ease,
-        opacity 0.3s ease;
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .menu-toggle.active span:nth-child(1) {
@@ -181,18 +172,13 @@ button {
 }
 
 
-/* =====================================================
-   HERO
-===================================================== */
+/* HERO */
 
 .hero {
     min-height: 680px;
-
     display: flex;
     align-items: center;
-
     position: relative;
-
     background-image:
         linear-gradient(
             90deg,
@@ -202,54 +188,40 @@ button {
             rgba(243, 245, 240, 0) 100%
         ),
         url("sfondo.jpg");
-
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
 .hero-content {
-    width: min(100% - 50px, var(--max-width));
+    width: min(calc(100% - 50px), var(--max-width));
     margin: 0 auto;
-
     padding: 100px 0;
 }
 
 .eyebrow {
     display: block;
-
     margin-bottom: 25px;
-
     color: var(--green-soft);
-
     font-size: 14px;
     font-weight: 600;
-
     letter-spacing: 3px;
 }
 
 .hero h1 {
     max-width: 750px;
-
     margin-bottom: 28px;
-
     font-family: Georgia, "Times New Roman", serif;
-
     font-size: clamp(52px, 7vw, 92px);
     line-height: 1.03;
-
     font-weight: 400;
-
     letter-spacing: -2px;
 }
 
 .hero p {
     max-width: 620px;
-
     margin-bottom: 38px;
-
     color: var(--green-text);
-
     font-size: 19px;
     line-height: 1.8;
 }
@@ -257,34 +229,24 @@ button {
 .hero-buttons {
     display: flex;
     align-items: center;
-
     gap: 30px;
 }
 
 
-/* =====================================================
-   BUTTON
-===================================================== */
+/* BUTTON */
 
 .button {
     display: inline-flex;
-
     align-items: center;
     justify-content: center;
-
     min-height: 50px;
-
     padding: 13px 26px;
-
     background: var(--green);
     color: var(--white);
-
     border: 1px solid var(--green);
     border-radius: 3px;
-
     font-size: 16px;
     font-weight: 600;
-
     transition: 0.25s ease;
 }
 
@@ -295,14 +257,10 @@ button {
 
 .text-link {
     color: var(--green);
-
     font-size: 16px;
     font-weight: 600;
-
     border-bottom: 1px solid var(--green);
-
     padding-bottom: 3px;
-
     transition: 0.25s ease;
 }
 
@@ -312,63 +270,45 @@ button {
 }
 
 
-/* =====================================================
-   INTRO
-===================================================== */
+/* INTRO */
 
 .intro {
-    width: min(100% - 50px, 900px);
-
+    width: min(calc(100% - 50px), 900px);
     margin: 0 auto;
-
     padding: 130px 0;
-
     text-align: center;
 }
 
 .section-label {
     margin-bottom: 18px;
-
     color: var(--green-soft);
-
     font-size: 13px;
     font-weight: 700;
-
     letter-spacing: 3px;
 }
 
 .intro h2,
 .section-heading h2 {
     font-family: Georgia, "Times New Roman", serif;
-
     font-size: clamp(42px, 6vw, 68px);
     line-height: 1.1;
-
     font-weight: 400;
-
     letter-spacing: -1px;
 }
 
 .intro p {
     margin-top: 22px;
-
     color: var(--green-text);
-
     font-size: 20px;
 }
 
 
-/* =====================================================
-   SEZIONI
-===================================================== */
+/* SECTIONS */
 
 .section {
-    width: min(100% - 50px, var(--max-width));
-
+    width: min(calc(100% - 50px), var(--max-width));
     margin: 0 auto;
-
     padding: 120px 0;
-
     border-top: 1px solid var(--line);
 }
 
@@ -378,26 +318,18 @@ button {
 
 .section-heading p {
     max-width: 600px;
-
     margin-top: 22px;
-
     color: var(--green-text);
-
     font-size: 18px;
 }
 
 
-/* =====================================================
-   ABOUT
-===================================================== */
+/* ABOUT */
 
 .about {
     display: grid;
-
     grid-template-columns: 1fr 1fr;
-
     gap: 90px;
-
     align-items: start;
 }
 
@@ -407,9 +339,7 @@ button {
 
 .section-text {
     max-width: 600px;
-
     color: var(--green-text);
-
     font-size: 18px;
 }
 
@@ -418,92 +348,64 @@ button {
 }
 
 
-/* =====================================================
-   SERVIZI
-===================================================== */
+/* SERVICES */
 
 .services-grid {
     display: grid;
-
     grid-template-columns: repeat(4, 1fr);
-
     gap: 20px;
 }
 
 .service-card {
     min-height: 330px;
-
     padding: 32px 28px;
-
     background: var(--white);
-
     border: 1px solid var(--line);
-
     display: flex;
     flex-direction: column;
-
-    transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .service-card:hover {
     transform: translateY(-5px);
-
-    box-shadow:
-        0 12px 35px rgba(48, 74, 66, 0.08);
+    box-shadow: 0 12px 35px rgba(48, 74, 66, 0.08);
 }
 
 .service-number {
     display: block;
-
     margin-bottom: 45px;
-
     color: var(--green-soft);
-
     font-size: 13px;
     font-weight: 700;
-
     letter-spacing: 2px;
 }
 
 .service-card h3 {
     margin-bottom: 18px;
-
     font-family: Georgia, "Times New Roman", serif;
-
     font-size: 28px;
     line-height: 1.2;
-
     font-weight: 400;
 }
 
 .service-card p {
     color: var(--green-text);
-
     font-size: 16px;
     line-height: 1.65;
 }
 
 .service-card a {
     margin-top: auto;
-
     padding-top: 30px;
-
     font-size: 15px;
     font-weight: 700;
-
     color: var(--green);
-
     border-bottom: 1px solid var(--green);
-
     width: fit-content;
 }
 
 
-/* =====================================================
-   PREZZI
-===================================================== */
+/* PRICE LIST */
 
 .price-list {
     max-width: 950px;
@@ -511,7 +413,6 @@ button {
 
 .price-category {
     padding: 45px 0;
-
     border-top: 1px solid var(--line);
 }
 
@@ -521,53 +422,36 @@ button {
 
 .price-category h3 {
     margin-bottom: 25px;
-
     font-size: 16px;
     font-weight: 700;
-
     letter-spacing: 1.5px;
 }
 
 .price-category h3 small {
     display: block;
-
     margin-top: 7px;
-
     color: var(--green-text);
-
     font-size: 13px;
-
     letter-spacing: 0;
-
     font-weight: 400;
 }
 
 .category-note {
     margin-top: -12px;
     margin-bottom: 22px;
-
     color: var(--green-text);
-
     font-size: 15px;
 }
 
 .price-row {
     min-height: 55px;
-
     padding: 12px 0;
-
     display: flex;
-
     align-items: center;
     justify-content: space-between;
-
     gap: 30px;
-
-    border-bottom:
-        1px solid rgba(197, 206, 200, 0.65);
-
+    border-bottom: 1px solid rgba(197, 206, 200, 0.65);
     color: var(--green-text);
-
     font-size: 17px;
 }
 
@@ -577,25 +461,18 @@ button {
 
 .price-row strong {
     flex-shrink: 0;
-
     color: var(--green);
-
     font-size: 17px;
     font-weight: 700;
 }
 
 
-/* =====================================================
-   PRENOTAZIONE
-===================================================== */
+/* BOOKING */
 
 .booking {
     display: grid;
-
     grid-template-columns: 1fr 1fr;
-
     gap: 90px;
-
     background: var(--paper);
 }
 
@@ -609,17 +486,13 @@ button {
 
 .booking-content > p {
     margin-bottom: 35px;
-
     color: var(--green-text);
-
     font-size: 18px;
 }
 
 .booking-buttons {
     display: flex;
-
     flex-wrap: wrap;
-
     gap: 15px;
 }
 
@@ -638,176 +511,124 @@ button {
 }
 
 
-/* =====================================================
-   FOOTER
-===================================================== */
+/* FOOTER */
 
 .site-footer {
     width: 100%;
-
-    background:
-        linear-gradient(
-            180deg,
-            #304A42 0%,
-            #2B453D 100%
-        );
-
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(
+        180deg,
+        #304A42 0%,
+        #2B453D 100%
+    );
     color: var(--white);
 }
 
 .footer-content {
-    width: min(100% - 50px, var(--max-width));
-
+    width: min(calc(100% - 50px), var(--max-width));
     margin: 0 auto;
-
     padding: 85px 0 75px;
-
     display: flex;
-
     flex-direction: column;
-
     align-items: center;
     justify-content: center;
-
     text-align: center;
 }
 
 .footer-motto {
     width: min(100%, 650px);
-
     padding: 0;
-
     position: relative;
 }
 
 .footer-label {
     display: block;
-
     margin-bottom: 25px;
-
     color: #B8C6BF;
-
     font-size: 12px;
     font-weight: 700;
-
     letter-spacing: 3px;
 }
 
 .footer-ornament {
     display: flex;
-
     align-items: center;
     justify-content: center;
-
     gap: 16px;
-
     margin-bottom: 25px;
 }
 
 .footer-ornament span {
     width: 65px;
     height: 1px;
-
     background: rgba(255, 255, 255, 0.22);
 }
 
 .footer-ornament b {
     color: #C8D2CC;
-
     font-size: 16px;
     font-weight: 400;
 }
 
 .footer-motto p {
     margin: 0;
-
     font-family: Georgia, "Times New Roman", serif;
-
     color: var(--white);
-
     font-size: clamp(28px, 4vw, 40px);
-
     line-height: 1.3;
-
     font-weight: 400;
-
     letter-spacing: -0.4px;
 }
 
 
-/* =====================================================
-   CONTATTI FOOTER
-===================================================== */
+/* CONTATTI */
 
 .footer-contacts {
     width: 100%;
     max-width: 700px;
-
     margin: 45px auto 0;
-
     padding-top: 35px;
-
     display: flex;
-
     align-items: center;
     justify-content: center;
-
     gap: 70px;
-
-    border-top:
-        1px solid rgba(255, 255, 255, 0.12);
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .footer-contact {
     display: flex;
-
     align-items: center;
-
     gap: 15px;
-
     text-align: left;
 }
 
 .footer-contact-icon {
     width: 42px;
     height: 42px;
-
     flex-shrink: 0;
-
     display: flex;
-
     align-items: center;
     justify-content: center;
-
-    border:
-        1px solid rgba(255, 255, 255, 0.22);
-
+    border: 1px solid rgba(255, 255, 255, 0.22);
     border-radius: 50%;
-
     font-size: 17px;
 }
 
 .footer-contact-label {
     display: block;
-
     margin-bottom: 3px;
-
     color: #B8C6BF;
-
     font-size: 10px;
     font-weight: 700;
-
     letter-spacing: 2px;
 }
 
 .footer-contact a,
 .footer-contact div > span:last-child {
     display: block;
-
     color: var(--white);
-
     font-size: 16px;
-
     transition: opacity 0.2s ease;
 }
 
@@ -816,28 +637,32 @@ button {
 }
 
 
-/* =====================================================
-   MAPPA
-===================================================== */
+/* MAPPA */
+
+#contatti {
+    width: 100%;
+    max-width: 760px;
+    margin: 60px auto 0;
+}
+
+#contatti h2 {
+    margin: 0;
+    color: var(--white);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(32px, 4vw, 46px);
+    line-height: 1.2;
+    font-weight: 400;
+}
 
 .mappa {
-    width: 50vw;
-
-    max-width: none;
-
-    margin: 55px auto 0;
-
+    width: min(50vw, 760px);
+    max-width: 100%;
+    margin: 30px auto 0;
     border-radius: 22px;
-
     overflow: hidden;
-
-    border:
-        1px solid rgba(48, 74, 66, 0.20);
-
+    border: 1px solid rgba(48, 74, 66, 0.20);
     background: var(--paper-dark);
-
     position: relative;
-
     box-shadow:
         0 20px 55px rgba(48, 74, 66, 0.14),
         0 5px 15px rgba(48, 74, 66, 0.06);
@@ -845,88 +670,49 @@ button {
 
 .mappa::before {
     content: "";
-
     position: absolute;
-
     inset: 0;
-
     pointer-events: none;
-
     border-radius: 22px;
-
-    box-shadow:
-        inset 0 0 0 1px rgba(255, 255, 255, 0.45);
-
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.45);
     z-index: 2;
 }
 
 .mappa iframe {
     display: block;
-
     width: 100%;
-
     height: 360px;
-
     border: 0;
 }
 
 
-/* =====================================================
-   MAPPA DESKTOP
-===================================================== */
-
-@media (min-width: 701px) {
-
-    .section:has(.mappa) {
-        width: 100%;
-    }
-
-    .mappa {
-        width: 50vw;
-        max-width: none;
-    }
-}
-
-
-/* =====================================================
-   FOOTER BOTTOM
-===================================================== */
+/* FOOTER BOTTOM */
 
 .footer-bottom {
     width: 100%;
-
+    margin: 0;
+    padding: 0;
     background: rgba(0, 0, 0, 0.13);
-
-    border-top:
-        1px solid rgba(255, 255, 255, 0.10);
-
+    border-top: 1px solid rgba(255, 255, 255, 0.10);
     text-align: center;
 }
 
 .footer-bottom p {
-    width: min(100% - 50px, var(--max-width));
-
+    width: min(calc(100% - 50px), var(--max-width));
     margin: 0 auto;
-
     padding: 20px 0;
-
     color: #AEBBB4;
-
     font-size: 12px;
-
     line-height: 1.7;
 }
 
 .footer-bottom span {
     margin: 0 8px;
-
     color: #71857B;
 }
 
 
-/* =====================================================
-   TABLET
-===================================================== */
+/* TABLET */
 
 @media (max-width: 1000px) {
 
@@ -936,15 +722,13 @@ button {
 
     .footer-motto {
         text-align: center;
-
         padding-left: 0;
     }
+
 }
 
 
-/* =====================================================
-   MOBILE
-===================================================== */
+/* MOBILE */
 
 @media (max-width: 700px) {
 
@@ -959,10 +743,12 @@ button {
 
     .header-inner {
         width: 100%;
-
-        min-height: 78px;
-
+        min-height: 82px;
         padding: 0 20px;
+    }
+
+    .logo {
+        padding: 4px 0;
     }
 
     .logo img {
@@ -973,41 +759,23 @@ button {
         display: flex;
     }
 
-
-    /* MENU */
-
     .main-nav {
         position: absolute;
-
         top: 100%;
         left: 0;
-
         width: 100%;
-
         display: flex;
-
         flex-direction: column;
-
         align-items: stretch;
-
         gap: 0;
-
         background: var(--paper);
-
         border-top: 1px solid var(--line);
         border-bottom: 1px solid var(--line);
-
-        box-shadow:
-            0 15px 30px rgba(48, 74, 66, 0.10);
-
+        box-shadow: 0 15px 30px rgba(48, 74, 66, 0.10);
         opacity: 0;
-
         visibility: hidden;
-
         transform: translateY(-10px);
-
         pointer-events: none;
-
         transition:
             opacity 0.25s ease,
             visibility 0.25s ease,
@@ -1016,30 +784,19 @@ button {
 
     .main-nav.active {
         opacity: 1;
-
         visibility: visible;
-
         transform: translateY(0);
-
         pointer-events: auto;
     }
 
     .main-nav a {
         width: 100%;
-
         min-height: 62px;
-
         padding: 17px 25px;
-
         display: flex;
-
         align-items: center;
-
-        border-bottom:
-            1px solid var(--line);
-
+        border-bottom: 1px solid var(--line);
         font-size: 18px;
-
         background: var(--paper);
     }
 
@@ -1053,22 +810,13 @@ button {
 
     .main-nav .nav-button {
         width: calc(100% - 30px);
-
         min-height: 52px;
-
         margin: 15px;
-
         padding: 13px 20px;
-
         justify-content: center;
-
         background: var(--green);
-
         color: var(--white);
-
-        border:
-            1px solid var(--green);
-
+        border: 1px solid var(--green);
         border-radius: 3px;
     }
 
@@ -1081,43 +829,34 @@ button {
 
     .hero-content {
         width: calc(100% - 40px);
-
         padding: 80px 0;
     }
 
     .eyebrow {
         font-size: 12px;
-
         letter-spacing: 2px;
-
         margin-bottom: 20px;
     }
 
     .hero h1 {
         font-size: clamp(48px, 15vw, 68px);
-
         letter-spacing: -1.5px;
     }
 
     .hero p {
         font-size: 18px;
-
         line-height: 1.7;
     }
 
     .hero-buttons {
         align-items: flex-start;
-
         flex-direction: column;
-
         gap: 20px;
     }
 
     .button {
         min-height: 52px;
-
         padding: 14px 24px;
-
         font-size: 17px;
     }
 
@@ -1126,7 +865,6 @@ button {
 
     .intro {
         width: calc(100% - 40px);
-
         padding: 90px 0;
     }
 
@@ -1140,11 +878,10 @@ button {
     }
 
 
-    /* SEZIONI */
+    /* SECTIONS */
 
     .section {
         width: calc(100% - 40px);
-
         padding: 90px 0;
     }
 
@@ -1157,7 +894,6 @@ button {
 
     .about {
         grid-template-columns: 1fr;
-
         gap: 40px;
     }
 
@@ -1166,17 +902,15 @@ button {
     }
 
 
-    /* SERVIZI */
+    /* SERVICES */
 
     .services-grid {
         grid-template-columns: 1fr;
-
         gap: 15px;
     }
 
     .service-card {
         min-height: 290px;
-
         padding: 30px 25px;
     }
 
@@ -1189,7 +923,7 @@ button {
     }
 
 
-    /* PREZZI */
+    /* PRICE */
 
     .price-category {
         padding: 35px 0;
@@ -1197,9 +931,7 @@ button {
 
     .price-row {
         min-height: 60px;
-
         font-size: 16px;
-
         gap: 20px;
     }
 
@@ -1212,9 +944,7 @@ button {
 
     .booking {
         width: 100%;
-
         grid-template-columns: 1fr;
-
         gap: 40px;
     }
 
@@ -1224,37 +954,27 @@ button {
 
     .booking-content {
         width: 100%;
-
         max-width: 100%;
     }
 
     .booking-content > p {
         width: 100%;
-
         margin-bottom: 30px;
-
         font-size: 17px;
-
         line-height: 1.7;
     }
 
     .booking-buttons {
         width: 100%;
-
         display: flex;
-
         flex-direction: column;
-
         flex-wrap: nowrap;
-
         gap: 12px;
     }
 
     .booking-buttons .button {
         width: 100%;
-
         min-width: 0;
-
         min-height: 52px;
     }
 
@@ -1263,21 +983,17 @@ button {
 
     .footer-content {
         width: 100%;
-
         padding: 65px 20px 55px;
     }
 
     .footer-label {
         margin-bottom: 20px;
-
         font-size: 11px;
-
         letter-spacing: 2.5px;
     }
 
     .footer-ornament {
         gap: 12px;
-
         margin-bottom: 22px;
     }
 
@@ -1287,25 +1003,19 @@ button {
 
     .footer-motto p {
         font-size: 28px;
-
         line-height: 1.3;
     }
 
     .footer-contacts {
         flex-direction: column;
-
         align-items: center;
-
         gap: 25px;
-
         margin-top: 40px;
-
         padding-top: 30px;
     }
 
     .footer-contact {
         width: 100%;
-
         max-width: 280px;
     }
 
@@ -1320,21 +1030,23 @@ button {
     }
 
 
-    /* =================================================
-       MAPPA MOBILE
-    ================================================= */
+    /* MAPPA MOBILE */
+
+    #contatti {
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    #contatti h2 {
+        font-size: 34px;
+    }
 
     .mappa {
         width: 100%;
-
-        max-width: none;
-
-        margin-top: 35px;
-
+        max-width: 100%;
+        margin-top: 25px;
         border-radius: 14px;
-
-        box-shadow:
-            0 10px 30px rgba(48, 74, 66, 0.10);
+        box-shadow: 0 10px 30px rgba(48, 74, 66, 0.10);
     }
 
     .mappa::before {
@@ -1345,22 +1057,16 @@ button {
         height: 350px;
     }
 
-
-    /* FOOTER BOTTOM */
-
     .footer-bottom p {
         width: calc(100% - 30px);
-
         padding: 18px 0;
-
         font-size: 11px;
     }
+
 }
 
 
-/* =====================================================
-   TELEFONI PICCOLI
-===================================================== */
+/* SCHERMI MOLTO PICCOLI */
 
 @media (max-width: 400px) {
 
@@ -1370,12 +1076,6 @@ button {
 
     .logo img {
         width: 115px;
-    }
-
-    .hero-overlay {
-        width: calc(100% - 30px);
-
-        padding-bottom: 25px;
     }
 
     .hero {
@@ -1402,13 +1102,11 @@ button {
 
     .booking {
         grid-template-columns: 1fr;
-
         gap: 35px;
     }
 
     .booking-content {
         width: 100%;
-
         max-width: 100%;
     }
 
@@ -1418,15 +1116,12 @@ button {
 
     .booking-buttons {
         width: 100%;
-
         flex-direction: column;
-
         gap: 10px;
     }
 
     .booking-buttons .button {
         width: 100%;
-
         min-width: 0;
     }
 
@@ -1437,4 +1132,23 @@ button {
     .footer-contact {
         max-width: 270px;
     }
+
+}
+.whatsapp-button {
+    gap: 10px;
+}
+
+.whatsapp-icon {
+    font-size: 18px;
+    line-height: 1;
+}
+.whatsapp-button {
+    gap: 10px;
+}
+
+.whatsapp-icon {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    fill: currentColor;
 }
