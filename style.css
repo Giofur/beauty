@@ -1,17 +1,25 @@
-:root {
-    --green: #304A42;
-    --green-soft: #647C70;
-    --green-text: #68756F;
-    --paper: #F3F5F0;
-    --paper-dark: #E4EAE4;
-    --line: #C5CEC8;
-    --white: #FCFDF9;
-    --footer-dark: #243831;
-    --footer-text: #C8D2CC;
-    --footer-line: rgba(255, 255, 255, 0.12);
-    --max-width: 1200px;
-}
 
+:root {
+    /* Palette ufficiale Borgo della Bellezza */
+    --green: #5B7776;
+    --green-soft: #789392;
+    --green-text: #606160;
+
+    --paper: #FFFFFF;
+    --paper-dark: #F0F4F3;
+    --line: #D8DEDC;
+    --white: #FFFFFF;
+
+    --footer-dark: #506C6B;
+    --footer-text: #E2EBE9;
+    --footer-line: rgba(255, 255, 255, 0.20);
+
+  /* Accenti del logo */
+    --accent: #A9CECD;
+    --text-dark: #4F5554;
+    --max-width: 1200px;
+ }
+                                                            
 
 /* RESET */
 
